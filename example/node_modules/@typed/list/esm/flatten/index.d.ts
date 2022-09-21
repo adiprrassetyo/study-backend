@@ -1,0 +1,2 @@
+export * from './flatten';
+//# sourceMappingURL=index.d.ts.map
