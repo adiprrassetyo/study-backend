@@ -1,0 +1,14 @@
+{
+  "name": "binar-sme-chapter-05-topic-01-express-js-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "description": "File [`index.js`](./index.js) adalah sebuah file yang berisi implementasi dari HTTP server yang ditulis menggunakan Express.js.",
+  "author": ""
+}
