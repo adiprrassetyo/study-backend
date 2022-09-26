@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 8000;
 // Yang bakal kita jadikan public
 // Sehingga user bisa akses CSS dan Javascript
 // Di browser
-const PUBLIC_DIRECTORY = path.join(__dirname, "public");
+const PUBLIC_DIRECTORY = path.join(__dirname, "public"); //bisa tidak digunakan
 
 // Set format request
 app.use(express.urlencoded({ extended: true }));
@@ -25,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 // Set PUBLIC_DIRECTORY sebagai
 // static files di express
 app.use(express.static(PUBLIC_DIRECTORY));
+// app.use(express.static("public"));
 
 // Bilang ke express kalo kita mau
 // pake EJS sebagai view engine

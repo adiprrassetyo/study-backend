@@ -5,12 +5,12 @@ const app = express();
 // Dengan nilai default 8000
 const PORT = process.env.PORT || 8000;
 
-app.use(express.urlencoded())
+app.use(express.urlencoded());
 
 function isAdmin(req, res, next) {
   if (req.query.iam === "admin") {
     next();
-    return
+    return;
   }
 
   res.status(401).send("Kamu bukan admin");
@@ -18,7 +18,7 @@ function isAdmin(req, res, next) {
 
 // GET /api/v1/books?author=
 app.get("/api/v1/books", isAdmin, (req, res) => {
-  console.log(req.query)
+  console.log(req.query);
   res
     .status(200)
     .send(`Kamu sedang mencari buku yang ditulis oleh ${req.query.author}`);
@@ -26,7 +26,7 @@ app.get("/api/v1/books", isAdmin, (req, res) => {
 
 // POST /api/v1/books
 app.post("/api/v1/books", isAdmin, (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
   res
     .status(201)
     .send("Terima kasih sudah menambahkan buku di dalam database kami");
@@ -34,10 +34,8 @@ app.post("/api/v1/books", isAdmin, (req, res) => {
 
 // PUT /api/v1/books/:id
 app.put("/api/v1/books/:id", isAdmin, (req, res) => {
-  console.log(req.body)
-  res
-    .status(200)
-    .send("Sudah diupdate!");
+  console.log(req.body);
+  res.status(200).send("Sudah diupdate!");
 });
 
 app.listen(PORT, () => {

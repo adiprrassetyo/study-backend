@@ -8,5 +8,8 @@
   },
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "description": "File [`index.js`](./index.js) adalah sebuah file yang berisi implementasi dari HTTP server yang ditulis menggunakan Express.js.",
+  "keywords": [],
+  "author": ""
 }
