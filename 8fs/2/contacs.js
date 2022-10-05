@@ -2,10 +2,12 @@ const fs = require("fs");
 const chalk = require("chalk");
 const validator = require("validator");
 
+// membuat folder data jika belum ada
 const dirPath = "./data";
 if (!fs.existsSync(dirPath)) {
   fs.mkdirSync(dirPath);
 }
+// membuat file contacts.json jika belum ada
 const dataPath = "./data/contact.json";
 if (!fs.existsSync(dataPath)) {
   fs.writeFileSync(dataPath, "[]", "utf8");
